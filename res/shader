@@ -1,0 +1,25 @@
+
+#Shader vertex
+#version 330
+layout (location = 0) in vec3 position;
+layout (location = 1) in vec3 color;
+out vec3 mycolor;
+void main(){
+	gl_PointSize = 20;
+	gl_Position = vec4(position.xyz,1.0);
+	mycolor = color;
+}
+
+#Shader fragment
+#version 330
+in vec3 mycolor;
+out vec4 color;
+void main(){
+	vec2 circCoord = 2.0 * gl_PointCoord - 1.0;
+	if (dot(circCoord, circCoord) > 1.0)
+		discard;
+	color = vec4(1.0f,mycolor.gb,1.0f);
+}
+
+
+
