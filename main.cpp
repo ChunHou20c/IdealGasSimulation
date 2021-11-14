@@ -1,9 +1,3 @@
-#include <iostream>
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <ctime>
-#include <random>
-#include <glm/glm.hpp>
 #include "shader.h"
 #include "simulator.h"
 
