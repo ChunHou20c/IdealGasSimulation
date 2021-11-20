@@ -8,6 +8,15 @@ struct position{
 	position():x(0),y(0),z(0){};
 	position(float X,float Y,float Z):x(X),y(Y),z(Z){}
 	float x, y, z;
+
+	position operator-(position &pos){
+		position current;
+		current.x=this->x-pos.x;
+		current.y=this->y-pos.y;
+		current.z=0.0f;
+		return current;
+	}
+	
 };
 
 struct color{
@@ -40,11 +49,15 @@ public:
 	//getters
 	position getPosition();
 
-	inline glm::vec2 getSpeed();
+	glm::vec2 getSpeed();
 
-	//inline float getMass();
+	inline float getMass(){
+		return 1.0f;
+	}
 
-	//inline float getRadius();
+	inline float getRadius(){
+		return 10.0f/300.0f;
+	}
 
 	void generate_random_particle();
 

@@ -20,6 +20,8 @@ private:
 	void ProcessInput();
 	void InitSimulator();
 	static void keyCallback(GLFWwindow* window,int key, int scancode,int action, int mods);
+	bool collided(particle &particle1,particle &particle2);
+	void elastic_collision(particle &particle1,particle &particle2);
 
 private:
 	GLFWwindow* _window;
@@ -29,4 +31,5 @@ private:
 	std::vector <particle> particles;
 	unsigned int _vao;
 	unsigned int _vbo;
+
 };

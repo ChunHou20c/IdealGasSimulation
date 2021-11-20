@@ -47,24 +47,24 @@ void particle::generate_random_particle(){
 void particle::calculate_position(){
 	_position.x= _position.x+_speed.x;
 
-	if(_position.x<-1)
-		{_position.x= -1+(-1-_position.x);
+	static const double BORDER=0.96667;
+	if(_position.x<-BORDER)
+		{_position.x= -BORDER+(-BORDER-_position.x);
 		_speed.x=-_speed.x;}
 	
-	if(_position.x>1){
-		_position.x= 1-(_position.x-1);
+	if(_position.x>BORDER){
+		_position.x= BORDER-(_position.x-BORDER);
 		_speed.x=-_speed.x;
 	}
-		//std::cout<<_position.x<<'\t';
 
 	_position.y= _position.y+_speed.y;
 
-	if(_position.y<-1)
-		{_position.y= -1+(-1-_position.y);
+	if(_position.y<-BORDER)
+		{_position.y= -BORDER+(-BORDER-_position.y);
 		_speed.y=-_speed.y;}
 	
-	if(_position.y>1){
-		_position.y= 1-(_position.y-1);
+	if(_position.y>BORDER){
+		_position.y= BORDER-(_position.y-BORDER);
 		_speed.y=-_speed.y;
 	}
 
