@@ -44,9 +44,12 @@
         make
         '';
         installPhase = ''
-          mkdir -p $out/bin
-          mv bin/IdealGasSimulator $out/bin
-          '';
+        mkdir -p $out/bin
+        mkdir -p $out/res
+
+        mv bin/IdealGasSimulator $out/bin
+        mv res $out/res
+        '';
       };
     };
   };
