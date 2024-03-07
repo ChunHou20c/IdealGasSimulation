@@ -45,10 +45,8 @@
         '';
         installPhase = ''
         mkdir -p $out/bin
-        mkdir -p $out/res
-
         mv bin/IdealGasSimulator $out/bin
-        mv res $out/res
+        mv res $out/bin/res
         '';
       };
     };
