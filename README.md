@@ -9,6 +9,7 @@ this will simulates the particles based on real physics
 ## Compilation and running of the program
 The program can be compiled using make
 ```
+git clone https://github.com/ChunHou20c/IdealGasSimulation.git
 make
 ./target/IdealGasSimulation
 ```
