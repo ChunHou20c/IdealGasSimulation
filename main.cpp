@@ -30,7 +30,6 @@ std::string GetExecutableDirectory() {
 int main(int argc, char *argv[]){
 
   std::string executablePath = GetExecutableDirectory();
-  std::cout << executablePath << std::endl;
 
   Simulator ideal_gas(600,600,"Ideal Gas Simulation", executablePath);
   ideal_gas.Run();
