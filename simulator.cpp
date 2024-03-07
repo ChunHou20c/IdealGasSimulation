@@ -32,7 +32,7 @@ void Simulator::MainLoop(){
 
 	InitSimulator();
 	glfwSetKeyCallback(_window,Simulator::keyCallback);
-	shader _shader("res/shader");
+	shader _shader(_executable_path.append("/res/shader"));
 	_shader.Bind();
 
 	glClearColor(0.8f,0.8f,0.8f,1.0f);
