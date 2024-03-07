@@ -9,7 +9,7 @@ this will simulates the particles based on real physics
 The program can be compiled using make
 ```
 make
-./bin/IdealGasSimulation
+./target/IdealGasSimulation
 ```
 
 ## Running the program using nix
