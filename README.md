@@ -3,7 +3,8 @@ simulate ideal gas particles by using openGL
 this will simulates the particles based on real physics
 
 ## The Simulation
-![](https://github.com/ChunHou20c/IdealGasSimulation/blob/main/2024-03-07%2016-53-16.gif)
+![2024-03-07 20-38-02(1)](https://github.com/ChunHou20c/IdealGasSimulation/assets/93393878/cc937926-2fe8-4beb-a188-39e2a6307e28)
+
 
 ## Compilation and running of the program
 The program can be compiled using make
@@ -16,6 +17,7 @@ make
 after cloning the repo:
 ```
 git clone https://github.com/ChunHou20c/IdealGasSimulation.git
+
 cd IdealGasSimulation
 nix run
 ```
