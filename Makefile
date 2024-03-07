@@ -6,7 +6,7 @@ CFLAGS = -lGL -lglfw -lGLEW -ldl
 	$(CC) -c -o $@ $<
 
 make: main.cpp particle.o shader.o simulator.o
-	$(CC) -o bin/out $^ $(CFLAGS)
+	$(CC) -o bin/IdealGasSimulator $^ $(CFLAGS)
 
 clean:
 	rm -f *.o bin/*

@@ -12,7 +12,6 @@
   {
 
     devShells.x86_64-linux = {
-
       default = pkgs.mkShell {
         packages = with pkgs; [
           gcc
@@ -20,6 +19,34 @@
           glfw
           glew
         ];
+      };
+    };
+
+    packages.x86_64-linux = {
+
+      default = pkgs.stdenv.mkDerivation {
+
+        name = "IdealGasSimulator";
+
+        nativeBuildInputs = with pkgs; [
+          gcc
+        ];
+
+        buildInputs = with pkgs; [
+          glm
+          glfw
+          glew
+        ];
+
+        src = ./.;
+        buildPhase = ''
+        mkdir -p bin
+        make
+        '';
+        installPhase = ''
+          mkdir -p $out/bin
+          mv bin/IdealGasSimulator $out/bin
+          '';
       };
     };
   };
