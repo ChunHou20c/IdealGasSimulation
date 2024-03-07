@@ -4,13 +4,13 @@
 #include <string>
 #include "particle.h"
 #include <vector>
-
+#include <string>
 
 
 class Simulator{
 
 public:
-	Simulator(int screenwidth,int screenheight,const char* title);
+	Simulator(int screenwidth,int screenheight,const char* title, std::string& executable_path);
 	~Simulator();
 
 	void Run();
@@ -31,5 +31,6 @@ private:
 	std::vector <particle> particles;
 	unsigned int _vao;
 	unsigned int _vbo;
+	std::string _executable_path;
 
 };

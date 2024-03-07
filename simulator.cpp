@@ -2,9 +2,10 @@
 #include "shader.h"
 #include <iostream>
 #include <vector>
+#include <string>
 
-Simulator::Simulator(int screenwidth,int screenheight,const char* title)
-:_window(nullptr),_screenWidth(screenwidth),_screenHeight(screenheight),_title(title),_vao(0),_vbo(0)
+Simulator::Simulator(int screenwidth,int screenheight,const char* title, std::string& executable_path)
+:_window(nullptr),_screenWidth(screenwidth),_screenHeight(screenheight),_title(title),_vao(0),_vbo(0), _executable_path(executable_path)
 {
 
 }
