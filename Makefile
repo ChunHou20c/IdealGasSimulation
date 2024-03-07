@@ -8,3 +8,5 @@ CFLAGS = -lGL -lglfw -lGLEW -ldl
 make: main.cpp particle.o shader.o simulator.o
 	$(CC) -o bin/out $^ $(CFLAGS)
 
+clean:
+	rm -f *.o bin/*
