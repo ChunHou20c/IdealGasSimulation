@@ -13,11 +13,17 @@
 
     devShells.x86_64-linux = {
       default = pkgs.mkShell {
-        packages = with pkgs; [
-          gcc
+        nativeBuildInputs = with pkgs; [
+
+          clang-tools
           glm
+          gcc
           glfw
           glew
+
+        ];
+        packages = with pkgs; [
+          bear
         ];
       };
     };

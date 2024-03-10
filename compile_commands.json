@@ -1,0 +1,17 @@
+[
+  {
+    "arguments": [
+      "/nix/store/ln6zld1ia7rxddmxgbpfhrmb42rbxdw8-gcc-wrapper-13.2.0/bin/g++",
+      "-c",
+      "particle.o",
+      "shader.o",
+      "simulator.o",
+      "-o",
+      "target/IdealGasSimulator",
+      "main.cpp"
+    ],
+    "directory": "/home/chunhou/Dev/IdealGasSimulation",
+    "file": "/home/chunhou/Dev/IdealGasSimulation/main.cpp",
+    "output": "/home/chunhou/Dev/IdealGasSimulation/target/IdealGasSimulator"
+  }
+]
